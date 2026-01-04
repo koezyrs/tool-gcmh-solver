@@ -4,63 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tool Giải GCMH Gunny</title>
+    <!-- SEO Meta Tags -->
+    <title>Tool Giải GCMH Gunny Chính Xác Nhất - Hỗ Trợ Tìm Bom Nhanh</title>
+    <meta name="description"
+        content="Công cụ giải Gà Con Mạo Hiểm (GCMH) game Gunny chính xác 100%. Hỗ trợ tính toán vị trí bom, gợi ý nước đi an toàn, giúp bạn qua ải GCMH dễ dàng. Miễn phí và không cần cài đặt.">
+    <meta name="keywords"
+        content="tool giải gcmh, giải gcmh gunny, tìm bom gcmh, tool dò mìn gunny, gcmh solver, hướng dẫn gcmh gunny, tool gunny miễn phí">
+    <meta name="author" content="GCMH Solver">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gcmh-solver.vercel.app/">
+    <meta property="og:title" content="Tool Giải GCMH Gunny Chính Xác Nhất">
+    <meta property="og:description"
+        content="Công cụ tìm bom Gà Con Mạo Hiểm (GCMH) Gunny. Tính toán xác suất, gợi ý nước đi chuẩn xác giúp bạn chiến thắng.">
+    <meta property="og:image" content="https://gcmh-solver.vercel.app/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gcmh-solver.vercel.app/">
+    <meta property="twitter:title" content="Tool Giải GCMH Gunny Chính Xác Nhất">
+    <meta property="twitter:description"
+        content="Công cụ tìm bom Gà Con Mạo Hiểm (GCMH) Gunny. Tính toán xác suất, gợi ý nước đi chuẩn xác.">
+    <meta property="twitter:image" content="https://gcmh-solver.vercel.app/logo.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://gcmh-solver.vercel.app/">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" href="logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Tool Giải GCMH Gunny",
+      "url": "https://gcmh-solver.vercel.app/",
+      "description": "Công cụ hỗ trợ giải màn Gà Con Mạo Hiểm trong game Gunny, giúp tìm bom và nước đi an toàn.",
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "VND"
+      },
+      "image": "https://gcmh-solver.vercel.app/logo.png",
+      "featureList": "Tính toán vị trí bom, Gợi ý nước đi an toàn, Hỗ trợ mọi kích thước màn hình",
+      "screenshot": "https://gcmh-solver.vercel.app/logo.png"
+    }
+    </script>
 </head>
 
 <body>
-    <img src="logo.png" alt="Gunny Logo" class="logo">
+    <img src="logo.png" alt="Gunny Logo - Biểu tượng Gà Con Mạo Hiểm" class="logo">
+
+    <style>
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+            padding: 10px 20px;
+        }
+    </style>
+
     <div class="container">
         <header>
             <h1>Tool Giải GCMH Gunny</h1>
+            <p class="subtitle" style="text-align: center; color: var(--text-secondary); margin-bottom: 20px;">Công cụ
+                hỗ trợ tìm bom và giải màn Gà Con Mạo Hiểm nhanh chóng, chính xác.</p>
         </header>
 
-        <div class="controls">
-            <div class="config">
-                <!-- Fixed 7x10 -->
-                <button id="reset-btn">Reset Bảng</button>
-            </div>
-        </div>
-
-        <div class="main-area">
-            <div class="toolbar">
-                <h3>Công cụ nhập liệu</h3>
-                <div class="tools-grid">
-                    <button class="tool-btn active" data-value="unknown" title="Chưa biết (Reset ô)">
-                        <span class="cell unknown"></span>
-                    </button>
-                    <button class="tool-btn" data-value="mine" title="Đánh dấu Bom">
-                        <span class="cell mine">💣</span>
-                    </button>
-                    <button class="tool-btn" data-value="0" title="Ô trống (0 bom xung quanh)">
-                        <span class="cell val-0"></span>
-                    </button>
-                    <!-- Numbers 1-8 -->
-                    <button class="tool-btn" data-value="1"><span class="cell val-1">1</span></button>
-                    <button class="tool-btn" data-value="2"><span class="cell val-2">2</span></button>
-                    <button class="tool-btn" data-value="3"><span class="cell val-3">3</span></button>
-                    <button class="tool-btn" data-value="4"><span class="cell val-4">4</span></button>
-                    <button class="tool-btn" data-value="5"><span class="cell val-5">5</span></button>
-                    <button class="tool-btn" data-value="6"><span class="cell val-6">6</span></button>
-                    <button class="tool-btn" data-value="7"><span class="cell val-7">7</span></button>
-                    <button class="tool-btn" data-value="8"><span class="cell val-8">8</span></button>
+        <main class="main-content">
+            <div class="controls">
+                <div class="config">
+                    <button id="reset-btn" aria-label="Reset lại bảng chơi">Reset Bảng</button>
                 </div>
             </div>
 
-            <div class="game-board-container">
-                <div id="game-board" class="game-board"></div>
-            </div>
+            <div style="height: 20px;"></div>
 
-            <div class="actions">
-                <button id="solve-btn" class="primary-btn">Phân Tích & Gợi Ý</button>
-            </div>
+            <div class="main-area">
+                <section class="toolbar" aria-labelledby="tools-heading">
+                    <h3 id="tools-heading">Công cụ nhập liệu</h3>
+                    <div class="tools-grid">
+                        <button class="tool-btn active" data-value="unknown" title="Chưa biết (Reset ô)"
+                            aria-label="Chọn công cụ chưa biết">
+                            <span class="cell unknown"></span>
+                        </button>
+                        <button class="tool-btn" data-value="mine" title="Đánh dấu Bom"
+                            aria-label="Chọn công cụ đánh dấu bom">
+                            <span class="cell mine">💣</span>
+                        </button>
+                        <button class="tool-btn" data-value="0" title="Ô trống (0 bom xung quanh)"
+                            aria-label="Chọn công cụ ô trống">
+                            <span class="cell val-0"></span>
+                        </button>
+                        <!-- Numbers 1-8 -->
+                        <button class="tool-btn" data-value="1" aria-label="Số 1"><span
+                                class="cell val-1">1</span></button>
+                        <button class="tool-btn" data-value="2" aria-label="Số 2"><span
+                                class="cell val-2">2</span></button>
+                        <button class="tool-btn" data-value="3" aria-label="Số 3"><span
+                                class="cell val-3">3</span></button>
+                        <button class="tool-btn" data-value="4" aria-label="Số 4"><span
+                                class="cell val-4">4</span></button>
+                        <button class="tool-btn" data-value="5" aria-label="Số 5"><span
+                                class="cell val-5">5</span></button>
+                        <button class="tool-btn" data-value="6" aria-label="Số 6"><span
+                                class="cell val-6">6</span></button>
+                        <button class="tool-btn" data-value="7" aria-label="Số 7"><span
+                                class="cell val-7">7</span></button>
+                        <button class="tool-btn" data-value="8" aria-label="Số 8"><span
+                                class="cell val-8">8</span></button>
+                    </div>
+                </section>
 
-            <div id="status-msg" class="status-msg"></div>
-        </div>
+                <section class="game-board-container" aria-label="Bảng lưới GCMH">
+                    <div id="game-board" class="game-board"></div>
+                </section>
+
+                <div class="actions">
+                    <button id="solve-btn" class="primary-btn">Phân Tích & Gợi Ý</button>
+                </div>
+
+                <div id="status-msg" class="status-msg" role="status" aria-live="polite"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 GCMH Solver. Công cụ hỗ trợ cộng đồng Gunny.</p>
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>

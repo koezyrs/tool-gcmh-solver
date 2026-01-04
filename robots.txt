@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://gcmh-solver.vercel.app/sitemap.xml
