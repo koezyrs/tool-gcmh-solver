@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Giải GCMH Gunny</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+    <img src="logo.png" alt="Gunny Logo" class="logo">
+    <div class="container">
+        <header>
+            <h1>Tool Giải GCMH Gunny</h1>
+        </header>
+
+        <div class="controls">
+            <div class="config">
+                <!-- Fixed 7x10 -->
+                <button id="reset-btn">Reset Bảng</button>
+            </div>
+        </div>
+
+        <div class="main-area">
+            <div class="toolbar">
+                <h3>Công cụ nhập liệu</h3>
+                <div class="tools-grid">
+                    <button class="tool-btn active" data-value="unknown" title="Chưa biết (Reset ô)">
+                        <span class="cell unknown"></span>
+                    </button>
+                    <button class="tool-btn" data-value="mine" title="Đánh dấu Bom">
+                        <span class="cell mine">💣</span>
+                    </button>
+                    <button class="tool-btn" data-value="0" title="Ô trống (0 bom xung quanh)">
+                        <span class="cell val-0"></span>
+                    </button>
+                    <!-- Numbers 1-8 -->
+                    <button class="tool-btn" data-value="1"><span class="cell val-1">1</span></button>
+                    <button class="tool-btn" data-value="2"><span class="cell val-2">2</span></button>
+                    <button class="tool-btn" data-value="3"><span class="cell val-3">3</span></button>
+                    <button class="tool-btn" data-value="4"><span class="cell val-4">4</span></button>
+                    <button class="tool-btn" data-value="5"><span class="cell val-5">5</span></button>
+                    <button class="tool-btn" data-value="6"><span class="cell val-6">6</span></button>
+                    <button class="tool-btn" data-value="7"><span class="cell val-7">7</span></button>
+                    <button class="tool-btn" data-value="8"><span class="cell val-8">8</span></button>
+                </div>
+            </div>
+
+            <div class="game-board-container">
+                <div id="game-board" class="game-board"></div>
+            </div>
+
+            <div class="actions">
+                <button id="solve-btn" class="primary-btn">Phân Tích & Gợi Ý</button>
+            </div>
+
+            <div id="status-msg" class="status-msg"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
